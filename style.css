@@ -122,9 +122,15 @@ body {
     border-radius: 5px;
 }
 
-#about-btn {
-    margin-top: 10px;
+p, ul {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    padding: 6px;
+    list-style-type: none;
 }
+
+
 
 .container p {
     font-size: 32px;
@@ -135,3 +141,47 @@ body {
 .container span {
     font-weight: 600;
 }
+
+/* about the game button */
+#modal-textbox {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    font-family: 'Architects Daughter', cursive;
+    background-color:antiquewhite;
+    height: 450px;
+    width: 700px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+
+}
+
+#modal-footer {
+    text-align: right;
+}
+
+h3 {
+    padding-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#openModal {
+    margin-top: 10px;
+}
+
+#close {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background-color: darkred;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
