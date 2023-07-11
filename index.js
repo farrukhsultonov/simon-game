@@ -1,6 +1,6 @@
 // get DOM elements needed for game
-const scoreBtn = document.getElementById("score");
-const colorBtn = document.querySelectorAll(".colors");
+const scoreEl = document.getElementById("score");
+const colorParts = document.querySelectorAll(".colors");
 const containerEl = document.querySelector(".container");
 const startBtn = document.querySelector("#start-btn");
 const resultEl = document.querySelector("#score-result");
@@ -33,12 +33,47 @@ const delay = async (time) => {
 };
 
 // function to generate a random path of colors
+const showPath = async (colors) => {
+    scoreEl.innerText = score;
+    // loop through each color in the array
+    for (let color of colors) {
+        const currentColor = document.querySelector(`.${color}`);
+        // pause execution for 500 millisecond
+        await delay(500);
+        // set background to new color
+        currentColor.style.backgroundColor = colorObj[color].new;
+        await delay(600);
+        // set background to old color
+        currentColor.style.backgroundColor = colorObj[color].current;
+        await delay(600);
+    }
+    // set flag to indicate the game is no longer generating path
+    isPathGenerating = false;
+}
+
+// function to end the game and show final score
+
+const endGame = () => {
+    resultEl.innerHTML = `<span> You Score : </span> ${score}`;
+    resultEl.classList.remove("hide");
+    containerEl.classList.remove("hide");
+    wrapperEl.classList.add("hide");
+    startBtn.innerText = "Play Again";
+    startBtn.classList.remove("hide");
+};
+
+// function to reset game after ending
+
+const resetGame = () => {
+    score = 0;
+    clickCount = 0;
+    randomColors = [];
+    isPathGenerating = false;
+    wrapperEl.classList.remove("hide");
+    containerEl.classList.add("hide");
 
 
-
-
-
-
+}
 
 
 // instructions button
