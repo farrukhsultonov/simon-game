@@ -72,7 +72,7 @@ body {
 .game::before {
     position: absolute;
     content: "";
-    background: #FAE8D6;
+    background: #fff;
     z-index: 1;
     width: 200px;
     height: 200px;
