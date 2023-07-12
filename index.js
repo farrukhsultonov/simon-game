@@ -88,21 +88,21 @@ const resetGame = () => {
 
 const handleColorClick = async (e) => {
     // if the path is currently being generated, ignore click
-    if(isPathGenerating) {
+    if (isPathGenerating) {
         return false;
     }
     // if clicked color is correct, update score and continue generating the path
-    if(e.target.classList.contains(randomColors[clickCount])) {
+    if (e.target.classList.contains(randomColors[clickCount])) {
         e.target.style.backgroundColor = colorObj[randomColors[clickCount]].new;
         await delay(500);
         e.target.style.backgroundColor = colorObj[randomColors[clickCount]].current;
         clickCount++;
-        if(clickCount === score) {
+        if (clickCount === score) {
             clickCount = 0;
             generateRandomPath();
         }
         // if the clicked color is incorrect. end game
-    }else {
+    } else {
         endGame();
     }
 };
