@@ -4,7 +4,7 @@
 Do you love challenging yourself? This game tests your intelligence and ability to remember.
 
 
-[//]: # (## Click [here]&#40;https://farrukhsultonov.github.io/Tic-Tac-Toe/&#41; to play the game.)
+## Click [here](https://farrukhsultonov.github.io/simon-game/) to play the game.
 
 ## Instruction
 
